@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation Template zum Erstellen einer EC2-Instanz (t2.micro)
+
+Resources:
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0921dd79992aa0cd6                                # <-- WIRD AUTOMATISCH VOM PARAMETER GESETZT
+      SecurityGroupIds:
+        - sg-0240ebcc350ddd58f                         # <-- WIRD AUTOMATISCH VOM PARAMETER GESETZT
